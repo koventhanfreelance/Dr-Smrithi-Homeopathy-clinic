@@ -1678,9 +1678,19 @@ toggler.addEventListener("click", () => {
   toggler.classList.toggle("stop-animation");
 
 });
-document.addEventListener('contextmenu', (e) => e.preventDefault()); 
-      function ctrlShiftKey(e, keyCode)
-        { return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0); } document.onkeydown = (e) => { // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U if ( event.keyCode === 123 || ctrlShiftKey(e, 'I') || ctrlShiftKey(e, 'J') || ctrlShiftKey(e, 'C') || (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0)) ) return false; };
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.key === keyCode;
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (e.keyCode === 123 || ctrlShiftKey(e, 'i') || ctrlShiftKey(e, 'j') || ctrlShiftKey(e, 'c') || (e.ctrlKey && e.key === 'u')) {
+    e.preventDefault();
+  }
+};
+
    </script>
 <script src="https://dunggramer.github.io/disable-devtool/disable-devtool.min.js" defer></script>
 <script src="https://cdn.staticaly.com/gh/DungGramer/disable-devtool/cbf447f/disable-devtool.min.js" defer></script>
