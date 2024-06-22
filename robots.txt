@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: https://drsmrithi.in/sitemap.xml
+Disallow: /sitemap.xml
