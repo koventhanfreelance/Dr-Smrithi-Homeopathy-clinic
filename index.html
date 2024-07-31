@@ -21,12 +21,15 @@
     } -->
     <script type="application/ld+json">
 {
-  "@context": "(link unavailable)",
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "url": "https://drsmrithi.in/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://drsmrithi.in/",
+     "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://drsmrithi.in/search?q={search_term_string}"
+        },,
     "query-input": "required name=search_term_string"
   },
   "sitelinksSearchbox": {
